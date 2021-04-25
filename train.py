@@ -351,10 +351,15 @@ def get_data_BIWI(dimension, fr):
         print("wsx log BIWI input_data shape",input_data.shape)
         input_data = input_data.reshape([-1, time_steps, series_length])
         print("wsx log BIWI input_data reshape",input_data.shape)
+        print("log: input_data[:3,:,:]->    \n",input_data[:3,:,:])
         if Model == 'rev_rec' or Model == 'rev_rec_plus':
+                print("log: enter rev_rec")
                 input_data = input_data.tolist()
                 targets = np.load('Datasets/'+ frames_ps +'BIWI_train_npy_data/target_' + dimension + '_BIWI_' + str(fr) + '.npy')
+                print("log: targets shape",targets.shape)
                 targets = targets.reshape([-1,time_steps, series_length])
+                print("log: targets reshape",targets.shape)
+                print("log: targets[:3,:,:]->    \n",targets[:3,:,:])
                 targets = targets.tolist()
         # prediction
         elif Model == 'prediction':
