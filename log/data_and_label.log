@@ -1,0 +1,43 @@
+ def get_data_BIWI(dimension, fr):
+         print("wsx log: get_data_BIWI(dimension, fr)", "dim",dimension,'\t',"fr",'\t',fr)
+         input_data_dir = 'Datasets/' + frames_ps + 'BIWI_train_npy_data/source_' + dimension + '_BIWI_' + str(fr) + '.npy'
+         print(input_data_dir)
+         input_data = np.load('Datasets/' + frames_ps + 'BIWI_train_npy_data/source_' + dimension + '_BIWI_' + str(fr) + '.npy')
+         print("wsx log: frames_ps", frames_ps)
+         print("wsx log BIWI input_data shape",input_data.shape)
+         input_data = input_data.reshape([-1, time_steps, series_length])
+         print("wsx log BIWI input_data reshape",input_data.shape)
+         if Model == 'rev_rec' or Model == 'rev_rec_plus':
+                 print("log: enter rev_rec")
+                 input_data = input_data.tolist()
+                 targets = np.load('Datasets/'+ frames_ps +'BIWI_train_npy_data/target_' + dimension + '_BIWI_' + str(fr) + '.npy')
+                 print("log: targets shape",targets.shape)
+                 targets = targets.reshape([-1,time_steps, series_length])
+                 print("log: targets reshape",targets.shape)
+                 targets = targets.tolist()
+         # prediction
+         elif Model == 'prediction':
+                 targets = np.concatenate((input_data[1:, :, :], input_data[-1, :, :].reshape([1, time_steps, series_length])),
+                                          axis=0)
+                 print("wsx log targets shape: ",targets.shape)
+                 # input_data = input_data[:-1]
+                 input_data = input_data.tolist()
+                 print("wsx log input_data.tolist() len(input_data): ",len(input_data))
+                 targets = targets.tolist()
+                 print("wsx log targets tolist() len(targets): ",len(targets))
+         # 2. permutation
+         elif Model == 'sorting':
+                 targets = copy.deepcopy(input_data)
+                 for i in range(input_data.shape[0]):
+                         permutation_ = np.random.permutation(time_steps)
+                         input_data[i] = input_data[i, permutation_]
+                 input_data = input_data.tolist()
+                 targets = targets.tolist()
+         # t_input_data = np.load('Datasets/'+ frames_ps +'BIWI_test_npy_data/t_source_' + dimension + '_BIWI_' + str(fr) + '.npy')
+         # t_input_data = t_input_data.reshape([-1, time_steps, series_length])
+         # t_input_data = t_input_data.tolist()
+         # t_targets = np.load('Datasets/'+ frames_ps +'BIWI_test_npy_data/t_target_' + dimension + '_BIWI_' + str(fr) + '.npy')
+         # t_targets = t_targets.reshape([-1, time_steps, series_length])
+         # t_targets = t_targets.tolist()
+         # # return input_data, targets, t_input_data, t_targets
+         return input_data[:-len(input_data)//3], targets[:-len(input_data)//3], input_data[-len(input_data)//3:], targets[-len(input_data)//3:]
