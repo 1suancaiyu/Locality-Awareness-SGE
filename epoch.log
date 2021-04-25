@@ -1,0 +1,141 @@
+ ## Dataset: BIWI
+ ## Attention: LA
+ ## Re-ID Manner: ap
+ ## Sequence Length: 10
+ ## Tempearture: 0.1
+ ## Pretext Task: prediction
+ ## GPU: 0
+
+ ## Training Gait Encoding Model: True
+ ## Training Recognition Network: True
+
+wsx log: enter train() folder_name dim train_dataset ./Models/Gait_Encoding_models/BIWI_LA_x_10_0.1_0pre_prediction 	 x 	 BIWI
+wsx log: get_data_BIWI(dimension, fr) dim x 	 fr 	 10
+Datasets/BIWI/10/BIWI_train_npy_data/source_x_BIWI_10.npy
+wsx log: frames_ps BIWI/10/
+wsx log BIWI input_data shape (68400, 20)
+wsx log BIWI input_data reshape (6840, 10, 20)
+wsx log targets shape:  (6840, 10, 20)
+wsx log input_data.tolist() len(input_data):  6840
+wsx log targets tolist() len(targets):  6840
+wsx log process_decoder_inut() enter
+wsx log data shape (128, 10, 20)
+wsx log ending shape (128, 9, 20)
+wsx log series_length 20
+wsx log decoder_input shape (128, 19, 20)
+wsx log traing_loss
+wsx log training_decoder_output shape (128, ?, 20)
+wsx log targets shape (128, 10, 20)
+Begin Training on Dimension [X]
+Epoch   1/400 Batch   34/35 - Training Loss: 574.158  - Validation loss: 998.634 - Contrastive loss:  6.056
+Epoch   2/400 Batch   34/35 - Training Loss: 567.730  - Validation loss: 992.498 - Contrastive loss:  5.889
+Epoch   3/400 Batch   34/35 - Training Loss: 568.033  - Validation loss: 991.957 - Contrastive loss:  5.773
+Epoch   4/400 Batch   34/35 - Training Loss: 570.083  - Validation loss: 992.433 - Contrastive loss:  5.716
+Epoch   5/400 Batch   34/35 - Training Loss: 573.297  - Validation loss: 992.492 - Contrastive loss:  5.682
+Epoch   6/400 Batch   34/35 - Training Loss: 574.376  - Validation loss: 990.327 - Contrastive loss:  5.660
+Epoch   7/400 Batch   34/35 - Training Loss: 575.065  - Validation loss: 988.292 - Contrastive loss:  5.648
+Epoch   8/400 Batch   34/35 - Training Loss: 574.619  - Validation loss: 986.399 - Contrastive loss:  5.642
+Epoch   9/400 Batch   34/35 - Training Loss: 574.541  - Validation loss: 985.197 - Contrastive loss:  5.640
+Epoch  10/400 Batch   34/35 - Training Loss: 575.571  - Validation loss: 984.636 - Contrastive loss:  5.642
+Epoch  11/400 Batch   34/35 - Training Loss: 578.603  - Validation loss: 985.755 - Contrastive loss:  5.649
+Epoch  12/400 Batch   34/35 - Training Loss: 581.862  - Validation loss: 987.185 - Contrastive loss:  5.649
+Epoch  13/400 Batch   34/35 - Training Loss: 584.866  - Validation loss: 987.921 - Contrastive loss:  5.645
+Epoch  14/400 Batch   34/35 - Training Loss: 587.394  - Validation loss: 988.700 - Contrastive loss:  5.642
+Epoch  15/400 Batch   34/35 - Training Loss: 586.631  - Validation loss: 986.580 - Contrastive loss:  5.631
+Epoch  16/400 Batch   34/35 - Training Loss: 585.179  - Validation loss: 983.201 - Contrastive loss:  5.628
+Epoch  17/400 Batch   34/35 - Training Loss: 584.731  - Validation loss: 982.373 - Contrastive loss:  5.628
+Epoch  18/400 Batch   34/35 - Training Loss: 584.793  - Validation loss: 982.016 - Contrastive loss:  5.628
+Epoch  19/400 Batch   34/35 - Training Loss: 583.734  - Validation loss: 979.993 - Contrastive loss:  5.627
+Epoch  20/400 Batch   34/35 - Training Loss: 584.709  - Validation loss: 981.034 - Contrastive loss:  5.624
+Epoch  21/400 Batch   34/35 - Training Loss: 585.553  - Validation loss: 981.027 - Contrastive loss:  5.623
+Epoch  22/400 Batch   34/35 - Training Loss: 583.847  - Validation loss: 976.400 - Contrastive loss:  5.642
+Epoch  23/400 Batch   34/35 - Training Loss: 584.997  - Validation loss: 974.255 - Contrastive loss:  5.679
+Epoch  24/400 Batch   34/35 - Training Loss: 584.055  - Validation loss: 969.950 - Contrastive loss:  5.730
+Epoch  25/400 Batch   34/35 - Training Loss: 576.949  - Validation loss: 954.439 - Contrastive loss:  5.643
+Epoch  26/400 Batch   34/35 - Training Loss: 578.662  - Validation loss: 950.972 - Contrastive loss:  5.625
+Epoch  27/400 Batch   34/35 - Training Loss: 584.322  - Validation loss: 959.271 - Contrastive loss:  5.671
+Epoch  28/400 Batch   34/35 - Training Loss: 583.608  - Validation loss: 954.634 - Contrastive loss:  5.660
+Epoch  29/400 Batch   34/35 - Training Loss: 584.473  - Validation loss: 948.693 - Contrastive loss:  5.646
+Epoch  30/400 Batch   34/35 - Training Loss: 578.037  - Validation loss: 953.485 - Contrastive loss:  5.614
+Epoch  31/400 Batch   34/35 - Training Loss: 575.067  - Validation loss: 940.129 - Contrastive loss:  5.645
+Epoch  32/400 Batch   34/35 - Training Loss: 576.642  - Validation loss: 947.062 - Contrastive loss:  5.652
+Epoch  33/400 Batch   34/35 - Training Loss: 565.314  - Validation loss: 964.234 - Contrastive loss:  5.830
+Epoch  34/400 Batch   34/35 - Training Loss: 571.499  - Validation loss: 934.778 - Contrastive loss:  5.646
+Epoch  35/400 Batch   34/35 - Training Loss: 571.482  - Validation loss: 932.737 - Contrastive loss:  5.658
+Epoch  36/400 Batch   34/35 - Training Loss: 576.795  - Validation loss: 933.975 - Contrastive loss:  5.660
+Epoch  37/400 Batch   34/35 - Training Loss: 573.987  - Validation loss: 931.526 - Contrastive loss:  5.645
+Epoch  38/400 Batch   34/35 - Training Loss: 574.156  - Validation loss: 941.259 - Contrastive loss:  5.650
+Epoch  39/400 Batch   34/35 - Training Loss: 568.869  - Validation loss: 949.285 - Contrastive loss:  5.667
+Epoch  40/400 Batch   34/35 - Training Loss: 574.476  - Validation loss: 934.483 - Contrastive loss:  5.674
+Epoch  41/400 Batch   34/35 - Training Loss: 584.901  - Validation loss: 943.552 - Contrastive loss:  5.637
+Epoch  42/400 Batch   34/35 - Training Loss: 576.484  - Validation loss: 916.680 - Contrastive loss:  5.683
+Epoch  43/400 Batch   34/35 - Training Loss: 570.538  - Validation loss: 939.350 - Contrastive loss:  5.687
+Epoch  44/400 Batch   34/35 - Training Loss: 581.531  - Validation loss: 938.050 - Contrastive loss:  5.683
+Epoch  45/400 Batch   34/35 - Training Loss: 566.515  - Validation loss: 923.060 - Contrastive loss:  5.636
+Epoch  46/400 Batch   34/35 - Training Loss: 569.013  - Validation loss: 925.507 - Contrastive loss:  5.660
+Epoch  47/400 Batch   34/35 - Training Loss: 569.930  - Validation loss: 915.988 - Contrastive loss:  5.643
+Epoch  48/400 Batch   34/35 - Training Loss: 573.866  - Validation loss: 917.783 - Contrastive loss:  5.640
+Epoch  49/400 Batch   34/35 - Training Loss: 577.182  - Validation loss: 915.198 - Contrastive loss:  5.653
+Epoch  50/400 Batch   34/35 - Training Loss: 566.733  - Validation loss: 914.369 - Contrastive loss:  5.632
+Epoch  51/400 Batch   34/35 - Training Loss: 568.105  - Validation loss: 916.916 - Contrastive loss:  5.637
+Epoch  52/400 Batch   34/35 - Training Loss: 567.790  - Validation loss: 905.239 - Contrastive loss:  5.639
+Epoch  53/400 Batch   34/35 - Training Loss: 572.227  - Validation loss: 899.542 - Contrastive loss:  5.626
+Epoch  54/400 Batch   34/35 - Training Loss: 564.678  - Validation loss: 894.978 - Contrastive loss:  5.631
+Epoch  55/400 Batch   34/35 - Training Loss: 559.033  - Validation loss: 901.769 - Contrastive loss:  5.627
+Epoch  56/400 Batch   34/35 - Training Loss: 564.540  - Validation loss: 888.103 - Contrastive loss:  5.612
+Epoch  57/400 Batch   34/35 - Training Loss: 579.219  - Validation loss: 899.711 - Contrastive loss:  5.620
+Epoch  58/400 Batch   34/35 - Training Loss: 571.566  - Validation loss: 898.425 - Contrastive loss:  5.619
+Epoch  59/400 Batch   34/35 - Training Loss: 563.530  - Validation loss: 915.065 - Contrastive loss:  5.623
+Epoch  60/400 Batch   34/35 - Training Loss: 547.222  - Validation loss: 908.284 - Contrastive loss:  5.623
+Epoch  61/400 Batch   34/35 - Training Loss: 561.285  - Validation loss: 891.901 - Contrastive loss:  5.592
+Epoch  62/400 Batch   34/35 - Training Loss: 564.033  - Validation loss: 890.966 - Contrastive loss:  5.614
+Epoch  63/400 Batch   34/35 - Training Loss: 571.308  - Validation loss: 897.635 - Contrastive loss:  5.609
+Epoch  64/400 Batch   34/35 - Training Loss: 562.194  - Validation loss: 930.404 - Contrastive loss:  5.613
+Epoch  65/400 Batch   34/35 - Training Loss: 569.185  - Validation loss: 898.232 - Contrastive loss:  5.593
+Epoch  66/400 Batch   34/35 - Training Loss: 559.781  - Validation loss: 885.354 - Contrastive loss:  5.581
+Epoch  67/400 Batch   34/35 - Training Loss: 569.085  - Validation loss: 907.243 - Contrastive loss:  5.595
+Epoch  68/400 Batch   34/35 - Training Loss: 557.350  - Validation loss: 909.490 - Contrastive loss:  5.606
+Epoch  69/400 Batch   34/35 - Training Loss: 567.874  - Validation loss: 901.169 - Contrastive loss:  5.604
+Epoch  70/400 Batch   34/35 - Training Loss: 570.080  - Validation loss: 887.159 - Contrastive loss:  5.610
+Epoch  71/400 Batch   34/35 - Training Loss: 569.902  - Validation loss: 875.137 - Contrastive loss:  5.590
+Epoch  72/400 Batch   34/35 - Training Loss: 561.517  - Validation loss: 873.011 - Contrastive loss:  5.588
+Epoch  73/400 Batch   34/35 - Training Loss: 572.799  - Validation loss: 904.596 - Contrastive loss:  5.588
+Epoch  74/400 Batch   34/35 - Training Loss: 574.365  - Validation loss: 907.422 - Contrastive loss:  5.575
+Epoch  75/400 Batch   34/35 - Training Loss: 572.347  - Validation loss: 899.409 - Contrastive loss:  5.597
+Epoch  76/400 Batch   34/35 - Training Loss: 565.572  - Validation loss: 919.642 - Contrastive loss:  5.600
+Epoch  77/400 Batch   34/35 - Training Loss: 559.291  - Validation loss: 916.105 - Contrastive loss:  5.599
+Epoch  78/400 Batch   34/35 - Training Loss: 570.638  - Validation loss: 863.583 - Contrastive loss:  5.622
+Epoch  79/400 Batch   34/35 - Training Loss: 569.242  - Validation loss: 855.212 - Contrastive loss:  5.620
+Epoch  80/400 Batch   34/35 - Training Loss: 574.636  - Validation loss: 851.196 - Contrastive loss:  5.607
+Epoch  81/400 Batch   34/35 - Training Loss: 572.337  - Validation loss: 856.230 - Contrastive loss:  5.594
+Epoch  82/400 Batch   34/35 - Training Loss: 564.613  - Validation loss: 886.093 - Contrastive loss:  5.582
+Epoch  83/400 Batch   34/35 - Training Loss: 562.485  - Validation loss: 858.979 - Contrastive loss:  5.550
+Epoch  84/400 Batch   34/35 - Training Loss: 575.853  - Validation loss: 879.191 - Contrastive loss:  5.584
+Epoch  85/400 Batch   34/35 - Training Loss: 561.409  - Validation loss: 870.733 - Contrastive loss:  5.589
+Epoch  86/400 Batch   34/35 - Training Loss: 573.931  - Validation loss: 908.640 - Contrastive loss:  5.594
+Epoch  87/400 Batch   34/35 - Training Loss: 567.723  - Validation loss: 864.717 - Contrastive loss:  5.593
+Epoch  88/400 Batch   34/35 - Training Loss: 583.904  - Validation loss: 854.515 - Contrastive loss:  5.570
+Epoch  89/400 Batch   34/35 - Training Loss: 585.093  - Validation loss: 882.639 - Contrastive loss:  5.592
+Epoch  90/400 Batch   34/35 - Training Loss: 582.570  - Validation loss: 846.782 - Contrastive loss:  5.589
+Epoch  91/400 Batch   34/35 - Training Loss: 574.276  - Validation loss: 831.287 - Contrastive loss:  5.582
+Epoch  92/400 Batch   34/35 - Training Loss: 588.049  - Validation loss: 832.783 - Contrastive loss:  5.571
+Epoch  93/400 Batch   34/35 - Training Loss: 594.413  - Validation loss: 839.354 - Contrastive loss:  5.579
+Epoch  94/400 Batch   34/35 - Training Loss: 582.663  - Validation loss: 857.900 - Contrastive loss:  5.581
+Epoch  95/400 Batch   34/35 - Training Loss: 569.685  - Validation loss: 850.150 - Contrastive loss:  5.589
+Epoch  96/400 Batch   34/35 - Training Loss: 574.933  - Validation loss: 812.338 - Contrastive loss:  5.599
+Epoch  97/400 Batch   34/35 - Training Loss: 590.766  - Validation loss: 814.600 - Contrastive loss:  5.582
+Epoch  98/400 Batch   34/35 - Training Loss: 570.344  - Validation loss: 809.167 - Contrastive loss:  5.571
+Epoch  99/400 Batch   34/35 - Training Loss: 562.996  - Validation loss: 832.963 - Contrastive loss:  5.554
+Epoch 100/400 Batch   34/35 - Training Loss: 554.694  - Validation loss: 831.252 - Contrastive loss:  5.535
+Epoch 101/400 Batch   34/35 - Training Loss: 563.029  - Validation loss: 846.097 - Contrastive loss:  5.543
+Epoch 102/400 Batch   34/35 - Training Loss: 540.380  - Validation loss: 856.937 - Contrastive loss:  5.563
+Epoch 103/400 Batch   34/35 - Training Loss: 563.302  - Validation loss: 848.196 - Contrastive loss:  5.548
+Epoch 104/400 Batch   34/35 - Training Loss: 553.054  - Validation loss: 856.399 - Contrastive loss:  5.520
+Epoch 105/400 Batch   34/35 - Training Loss: 546.097  - Validation loss: 827.489 - Contrastive loss:  5.543
+Epoch 106/400 Batch   34/35 - Training Loss: 539.252  - Validation loss: 820.344 - Contrastive loss:  5.541
+Epoch 107/400 Batch   34/35 - Training Loss: 567.332  - Validation loss: 838.165 - Contrastive loss:  5.550
+Epoch 108/400 Batch   34/35 - Training Loss: 570.940  - Validation loss: 844.138 - Contrastive loss:  5.558
+Epoch 109/400 Batch   34/35 - Training Loss: 597.473  - Validation loss: 807.713 - Contrastive loss:  5.551
+Epoch 110/400 Batch   34/35 - Training Loss: 574.622  - Validation loss: 804.459 - Contrastive loss:  5.547
+Epoch 111/400 Batch   34/35 - Training Loss: 573.183  - Validation loss: 833.510 - Contrastive loss:  5.522
+Epoch 112/400 Batch   34/35 - Training Loss: 579.488  - Validation loss: 824.700 - Contrastive loss:  5.536
